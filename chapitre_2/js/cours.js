@@ -4,19 +4,17 @@ var titresH2 = document.getElementsByTagName("h2"); // Tous les titres h2
 console.log(titresH2[0]); // Affiche le premier titre h2
 console.log(titresH2.length); // Affiche 3
 
-// Accès à tous les éléments ayant la classe "merveilles"
-var listes = document.getElementsByClassName("merveilles");
-for (var i = 0; i < listes.length; i++) {
-    console.log(listes[i]);
+// Tous les éléments ayant la classe "merveilles"
+var merveilles = document.getElementsByClassName("merveilles");
+for (var i = 0; i < merveilles.length; i++) {
+    console.log(merveilles[i]);
 }
 
-// Accès à l'élément portant l'identifiant "nouvelles"
-var listeNouvelles = document.getElementById("nouvelles");
-console.log(listeNouvelles);
+// Elément portant l'identifiant "nouvelles"
+console.log(document.getElementById("nouvelles"));
 
-// Accès aux éléments fils de l'élément d'identifiant "antiques" ayant la classe "existe"
-var merveillesAntiquesExistantes = document.getElementById("antiques").getElementsByClassName("existe");
-console.log(merveillesAntiquesExistantes.length);
+// Tous les éléments fils de l'élément d'identifiant "antiques" ayant la classe "existe"
+console.log(document.getElementById("antiques").getElementsByClassName("existe").length); // Affiche 1
 
 // Tous les paragraphes
 console.log(document.querySelectorAll("p").length); // Affiche 3
@@ -28,16 +26,24 @@ console.log(document.querySelectorAll("#contenu p").length); // Affiche 2
 console.log(document.querySelectorAll(".existe").length); // Affiche 8
 
 // Tous les éléments fils de l'élément identifié par "antiques" ayant la classe "existe"
-console.log(document.querySelectorAll("#antiques > .existe")); // Affiche 1
+console.log(document.querySelectorAll("#antiques > .existe").length); // Affiche 1
 
 // Le premier paragraphe
 console.log(document.querySelector("p"));
 
-console.log(document.querySelector("#contenu").innerHTML);
+// Le contenu HTML de l'élément identifié par "contenu"
+console.log(document.getElementById("contenu").innerHTML);
 
-console.log(document.querySelector("#contenu").textContent);
+// Le contenu textuel de l'élément identifié par "contenu"
+console.log(document.getElementById("contenu").textContent);
 
+// L'attribut href du premier lien
 console.log(document.querySelector("a").getAttribute("href"));
+
+// L'identifiant de la première liste
+console.log(document.querySelector("ul").id);
+// L'attribut href du premier lien
+console.log(document.querySelector("a").href);
 
 if (document.querySelector("a").hasAttribute("target")) {
     console.log("Le premier lien possède l'attribut target");
@@ -45,9 +51,10 @@ if (document.querySelector("a").hasAttribute("target")) {
     console.log("Le premier lien ne possède pas l'attribut target");
 }
 
+// Liste des classes de l'élément identifié par "antiques"
 var classes = document.getElementById("antiques").classList;
-console.log(classes.length);
-console.log(classes[0]);
+console.log(classes.length); // Affiche 1
+console.log(classes[0]); // Affiche "merveilles"
 
 if (document.getElementById("antiques").classList.contains("merveille")) {
     console.log("L'élément identifié par antiques possède la classe merveille");
