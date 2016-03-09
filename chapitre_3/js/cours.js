@@ -2,7 +2,7 @@
 console.log(document.getElementById("langages").innerHTML);
 
 // Modification du contenu HTML de la liste : ajout d'un langage
-document.getElementById("langages").innerHTML += "<li>Ruby</li>";
+document.getElementById("langages").innerHTML += '<li id="c">C</li>';
 
 // Suppression du contenu HTML de la liste
 //document.getElementById("langages").innerHTML = "";
@@ -24,11 +24,29 @@ var complement = document.createTextNode(" à découvrir");
 document.querySelector("h1").appendChild(complement);
 
 var python = document.createElement("li"); // Création d'un élément li
-python.textContent = "Python"; // Définition de son contenu textuel
 python.id = "python"; // Définition de son identifiant
+python.textContent = "Python"; // Définition de son contenu textuel
 document.getElementById("langages").appendChild(python); // Ajout du nouvel élément à la liste
 
-//python.appendChild(document.createTextNode("Python")); // Définition de son contenu textuel
+var ruby = document.createElement("li"); // Création d'un élément li
+ruby.id = "ruby"; // Définition de son identifiant
+ruby.appendChild(document.createTextNode("Ruby")); // Définition de son contenu textuel
+document.getElementById("langages").appendChild(ruby); // Ajout du nouvel élément à la liste
 
-var php = document.getElementById("php");
-php.parentNode.insertBefore(python, php);
+var perl = document.createElement("li"); // Création d'un élément li
+perl.id = "perl"; // Définition de son identifiant
+perl.textContent = "Perl"; // Définition de son contenu textuel
+// Ajout du nouvel élément avant l'identifiant identifié par "php"
+document.getElementById("langages").insertBefore(perl, document.getElementById("php"));
+
+// Ajout d'un élément au tout début de la liste
+document.getElementById('langages').insertAdjacentHTML("afterBegin", '<li id="javascript">JavaScript</li>');
+
+var bash = document.createElement("li"); // Création d'un élément li
+bash.id = "bash"; // Définition de son identifiant
+bash.textContent = "bash"; // Définition de son contenu textuel
+// Remplacement de l'élément identifié par "perl" par le nouvel élément
+document.getElementById("langages").replaceChild(bash, document.getElementById("perl"));
+
+// Suppression de l'élément identifié par "bash"
+document.getElementById("langages").removeChild(document.getElementById("bash"));
