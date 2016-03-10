@@ -1,4 +1,4 @@
-// Affiche du contenu HTML de la liste
+// Affichage du contenu HTML de la liste
 console.log(document.getElementById("langages").innerHTML);
 
 // Modification du contenu HTML de la liste : ajout d'un langage
@@ -9,9 +9,6 @@ document.getElementById("langages").innerHTML += '<li id="c">C</li>';
 
 // Modification du contenu textuel du premier titre
 document.querySelector("h1").textContent += " de programmation";
-
-// Modification de la cible du premier lien
-document.querySelector("a").href = "https://fr.wikipedia.org/wiki/Langage_informatique";
 
 var titre = document.querySelector("h1"); // Accès au premier titre h1
 titre.classList.add("titre"); // Ajout de la classe "titre"
@@ -50,3 +47,13 @@ document.getElementById("langages").replaceChild(bash, document.getElementById("
 
 // Suppression de l'élément identifié par "bash"
 document.getElementById("langages").removeChild(document.getElementById("bash"));
+
+// Exercice 1 : ajout d'un paragraphe contenant un lien
+var p = document.createElement("p");
+var lien = document.createElement("a");
+lien.href = "https://fr.wikipedia.org/wiki/Liste_des_langages_de_programmation";
+lien.textContent = "liste";
+p.appendChild(document.createTextNode("En voici une "));
+p.appendChild(lien);
+p.appendChild(document.createTextNode(" plus complète."));
+document.getElementById("contenu").appendChild(p);
