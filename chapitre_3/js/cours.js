@@ -16,11 +16,6 @@ titre.classList.remove("debut"); // Suppression de la classe "titre"
 titre.classList.add("titre"); // Ajout de la classe "titre"
 console.log(titre);
 
-// Création d'un noeud textuel
-var complement = document.createTextNode(" à découvrir");
-// Ajout de ce noeud à la fin du premier titre
-document.querySelector("h1").appendChild(complement);
-
 var python = document.createElement("li"); // Création d'un élément li
 python.id = "python"; // Définition de son identifiant
 python.textContent = "Python"; // Définition de son contenu textuel
@@ -42,7 +37,7 @@ document.getElementById('langages').insertAdjacentHTML("afterBegin", '<li id="ja
 
 var bash = document.createElement("li"); // Création d'un élément li
 bash.id = "bash"; // Définition de son identifiant
-bash.textContent = "bash"; // Définition de son contenu textuel
+bash.textContent = "Bash"; // Définition de son contenu textuel
 // Remplacement de l'élément identifié par "perl" par le nouvel élément
 document.getElementById("langages").replaceChild(bash, document.getElementById("perl"));
 
