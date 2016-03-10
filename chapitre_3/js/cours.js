@@ -1,6 +1,3 @@
-// Affichage du contenu HTML de la liste
-console.log(document.getElementById("langages").innerHTML);
-
 // Modification du contenu HTML de la liste : ajout d'un langage
 document.getElementById("langages").innerHTML += '<li id="c">C</li>';
 
@@ -10,9 +7,13 @@ document.getElementById("langages").innerHTML += '<li id="c">C</li>';
 // Modification du contenu textuel du premier titre
 document.querySelector("h1").textContent += " de programmation";
 
+// Définition de l'attribut "id" du premier titre
+//document.querySelector("h1").setAttribute("id", "titre");
+document.querySelector("h1").id = "titre";
+
 var titre = document.querySelector("h1"); // Accès au premier titre h1
-titre.classList.add("titre"); // Ajout de la classe "titre"
 titre.classList.remove("debut"); // Suppression de la classe "titre"
+titre.classList.add("titre"); // Ajout de la classe "titre"
 console.log(titre);
 
 // Création d'un noeud textuel
@@ -23,12 +24,12 @@ document.querySelector("h1").appendChild(complement);
 var python = document.createElement("li"); // Création d'un élément li
 python.id = "python"; // Définition de son identifiant
 python.textContent = "Python"; // Définition de son contenu textuel
-document.getElementById("langages").appendChild(python); // Ajout du nouvel élément à la liste
+document.getElementById("langages").appendChild(python); // Insertion du nouvel élément
 
 var ruby = document.createElement("li"); // Création d'un élément li
 ruby.id = "ruby"; // Définition de son identifiant
 ruby.appendChild(document.createTextNode("Ruby")); // Définition de son contenu textuel
-document.getElementById("langages").appendChild(ruby); // Ajout du nouvel élément à la liste
+document.getElementById("langages").appendChild(ruby); // Insertion du nouvel élément
 
 var perl = document.createElement("li"); // Création d'un élément li
 perl.id = "perl"; // Définition de son identifiant
