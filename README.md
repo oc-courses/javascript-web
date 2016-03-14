@@ -1,4 +1,4 @@
-# Crées des pages web interactives avec JavaScript
+# Créez des pages web interactives avec JavaScript
 
 Code source associé au cours OpenClassrooms "Créez des pages web interactives avec JavaScript".
 
