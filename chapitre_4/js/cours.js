@@ -5,10 +5,10 @@ p1.style.fontFamily = "Arial";
 p1.style.backgroundColor = "black";
 
 var paragraphes = document.getElementsByTagName("p");
-for (var i = 0; i < paragraphes.length; i++) {
-    console.log(paragraphes[i].style.color);
-}
+console.log(paragraphes[0].style.color); // Affiche "red"
+console.log(paragraphes[1].style.color); // Affiche "green"
+console.log(paragraphes[2].style.color); // N'affiche rien
 
-var style = getComputedStyle(document.getElementById("para"));
-console.log(style.color);
-console.log(style.fontStyle);
+var stylePara = getComputedStyle(document.getElementById("para"));
+console.log(stylePara.fontStyle); // Affiche "italic"
+console.log(stylePara.color); // Affiche la couleur bleue en valeurs RGB
