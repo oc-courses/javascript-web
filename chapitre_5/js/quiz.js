@@ -2,9 +2,7 @@
 Exercice : questions de quiz
 */
 
-// Liste des questions à afficher. Une question est définie par :
-// - son énoncé
-// - sa réponse
+// Liste des questions à afficher. Une question est définie par son énoncé et sa réponse
 var questions = [
     {
         enonce: "Combien font 2+2 ?",

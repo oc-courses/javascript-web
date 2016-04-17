@@ -9,8 +9,8 @@ function clic() {
 
 var compteurClics = 0;
 
-document.getElementById("boutonClic").addEventListener("click", clic);
+document.getElementById("clic").addEventListener("click", clic);
 
-document.getElementById("boutonDesactiver").addEventListener("click", function () {
-    document.getElementById("boutonClic").removeEventListener("click", clic);
+document.getElementById("desactiver").addEventListener("click", function () {
+    document.getElementById("clic").removeEventListener("click", clic);
 });
