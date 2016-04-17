@@ -76,7 +76,7 @@ window.addEventListener("beforeunload", function (e) {
     return message; // Provoque une demande de confirmation (certains navigateurs)
 });
 
-// Gestion du clic sur le bouton
+// Gestion du clic sur le document
 document.addEventListener("click", function () {
     console.log("Gestionnaire document");
 });
@@ -84,7 +84,7 @@ document.addEventListener("click", function () {
 document.getElementById("para").addEventListener("click", function () {
     console.log("Gestionnaire paragraphe");
 });
-// Gestion du clic sur le document
+// Gestion du clic sur le bouton
 document.getElementById("propa").addEventListener("click", function (e) {
     console.log("Gestionnaire bouton");
     e.stopPropagation(); // Arrêt de la propagation de l'évènement
