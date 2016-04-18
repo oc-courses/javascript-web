@@ -17,7 +17,8 @@ boutonElt.removeEventListener("click", clic);
 
 // Ajout d'un gestionnaire qui affiche le type et la cible de l'évènement
 document.getElementById("bouton").addEventListener("click", function (e) {
-    console.log("Evènement : " + e.type + ", cible : " + e.target);
+    console.log("Evènement : " + e.type +
+        ", texte de la cible : " + e.target.textContent);
 });
 
 // Gestion de l'appui sur une touche du clavier produisant un caractère
