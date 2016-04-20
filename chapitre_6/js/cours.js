@@ -32,9 +32,9 @@ document.getElementById("nationalite").addEventListener("change", function (e) {
 });
 
 var form = document.querySelector("form");
-/*console.log("Nombre de champs de saisie : " + form.elements.length); // Affiche 10
+console.log("Nombre de champs de saisie : " + form.elements.length); // Affiche 10
 console.log(form.elements[0].name); // Affiche "pseudo"
-console.log(form.elements.mdp.type); // Affiche "password"*/
+console.log(form.elements.mdp.type); // Affiche "password"
 
 // Affiche de toutes les données saisies ou choisies
 form.addEventListener("submit", function (e) {
