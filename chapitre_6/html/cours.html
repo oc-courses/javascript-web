@@ -9,7 +9,7 @@
 <body>
     <form>
         <h1>Formulaire d'inscription</h1>
-        <p id="paraPseudo">
+        <p>
             <label for="pseudo">Pseudo</label> :
             <input type="text" name="pseudo" id="pseudo" required>
             <span id="aidePseudo"></span>
@@ -21,7 +21,7 @@
         </p>
         <p>
             <label for="courriel">Courriel</label> :
-            <input type="email" name="courriel" id="courriel" placeholder="utilisateur@domaine.fr">
+            <input type="email" name="courriel" id="courriel" required placeholder="utilisateur@domaine.fr">
             <span id="aideCourriel"></span>
         </p>
         <p>
@@ -45,13 +45,12 @@
                 <option value="FR" selected>Française</option>
                 <option value="BE">Belge</option>
                 <option value="SUI">Suisse</option>
+                <option value="XXX">Autre</option>
             </select>
         </p>
 
         <input type="submit" value="Envoyer">
         <input type="reset" value="Annuler">
-
-        <div id="resultat"></div>
     </form>
 
     <script src="../js/cours.js"></script>
