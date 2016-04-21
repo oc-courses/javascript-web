@@ -17,18 +17,21 @@ function diminuerCompteur() {
 // Appelle la fonction diminuerCompteur toutes les secondes
 var timer = setInterval(diminuerCompteur, 1000);
 
-var balle = document.getElementById("balle");
-var diametreBalle = parseFloat(getComputedStyle(balle).width);
-var direction = 1;
-var vitesse = 8;
+var cadre = document.getElementById("cadre");
+var bloc = document.getElementById("bloc");
+var diametreBloc = parseFloat(getComputedStyle(bloc).width);
+var xMin = 0;
+var vitesse = 7;
 
-function animerBalle() {
-    var left = parseFloat(getComputedStyle(balle).left);
-    if ((left > window.innerWidth - diametreBalle - vitesse) || (left < 0)) {
-        direction *= -1;
+function deplacerBloc() {
+    var idRequest = requestAnimationFrame(deplacerBloc);
+
+    var xBloc = parseFloat(getComputedStyle(bloc).left);
+    var xMax = parseFloat(getComputedStyle(cadre).width);
+    if (xBloc + diametreBloc <= xMax) {
+        bloc.style.left = (xBloc + vitesse) + "px";
+    } else {
+        cancelAnimationFrame(idRequest);
     }
-    balle.style.left = (left + vitesse * direction) + "px";
-
-    requestAnimationFrame(animerBalle);
 }
-//animerBalle();
+deplacerBloc();
