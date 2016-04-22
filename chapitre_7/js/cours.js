@@ -25,7 +25,7 @@ var intervalId = setInterval(diminuerCompteur, 1000);
 var cadre = document.getElementById("cadre");
 var bloc = document.getElementById("bloc");
 var vitesse = 7; // Valeur du déplacement en pixels
-// Conversion en nombre du diamètre du bloc (valeur de la forme "XXpx")
+// Conversion en nombre de la largeur du bloc (valeur de la forme "XXpx")
 var largeurBloc = parseFloat(getComputedStyle(bloc).width);
 var animationId = null; // Identifiant de l'animation
 
