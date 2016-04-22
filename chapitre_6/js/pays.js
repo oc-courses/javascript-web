@@ -1,3 +1,7 @@
+/*
+Exercice : autocomplétion d'un pays
+*/
+
 // Liste des pays
 var listePays = [
     "Afghanistan",

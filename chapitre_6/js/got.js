@@ -1,3 +1,7 @@
+/*
+Exercice : maisons et personnages de Game of Thrones
+*/
+
 // Liste de quelques maisons de Game of Thrones. Chaque maison a un code et un nom
 var maisons = [
     {
