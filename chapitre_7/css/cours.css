@@ -6,19 +6,20 @@
     width: 20px;
     height: 40px;
     background: red;
-    position: relative;
-    /*margin-left: -20px;
-    animation-name: deplacerBloc;
-    animation-duration: 10s;
-    animation-fill-mode: forwards;*/
+    position: relative; /* Permettra de décaler le bloc */
+    /*margin-left: -20px; /* Simplifie le calcul des positions initiale et finale du bloc */
+    animation-name: deplacerBloc; /* Nom de l'animation */
+    animation-duration: 6s; /* Durée de l'animation */
+    animation-fill-mode: forwards; /* Laisse le bloc dans sa position finale */
 }
-
 
 /*@keyframes deplacerBloc {
     from {
-        left: 20px;
+        /* Position initiale : bord gauche du cadre (en tenant compte de la marge négative) */
+        left: 20px; 
     }
     to {
-        left: 100%;
+        /* Position finale : bord droit du cadre (en tenant compte de la marge négative) */
+        left: 100%; 
     }
 }*/
