@@ -16,10 +16,8 @@ Code source associé au cours OpenClassrooms "Créez des pages web interactives 
     * Chapitre 5 : Réagissez à des évènements
     * Chapitre 6 : Manipulez les formulaires
     * Chapitre 7 : Animez vos pages
-    * Chapitre 8 : Créez un effet pop-up
 
-* Partie 3 : Utilisez des services web
+* Partie 3 : Interagissez avec un serveur
 
-    * Chapitre 9 : La théorie : HTTP, AJAX et JSON
-    * Chapitre 10 : Interrogez un serveur web
-    * Chapitre 11 : Envoyez des données à un serveur web
+    * Chapitre 8 : Récupérez des données externes
+    * Chapitre 9 : Envoyez des données à un serveur web
