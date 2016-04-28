@@ -17,7 +17,7 @@ Code source associé au cours OpenClassrooms "Créez des pages web interactives 
     * Chapitre 6 : Manipulez les formulaires
     * Chapitre 7 : Animez vos pages
 
-* Partie 3 : Interagissez avec un serveur
+* Partie 3 : Connectez-vous au Monde
 
-    * Chapitre 8 : Récupérez des données externes
-    * Chapitre 9 : Envoyez des données à un serveur web
+    * Chapitre 8 : Interrogez un serveur web
+    * Chapitre 9 : Utilisez des API
