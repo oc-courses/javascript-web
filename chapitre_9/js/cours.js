@@ -29,6 +29,21 @@ function postJson(url, data) {
     req.send(JSON.stringify(data));
 }
 
+function postForm(url, data) {
+    var req = new XMLHttpRequest();
+    req.open("POST", url, true);
+    req.addEventListener("load", function () {
+        if (req.status >= 400) {
+            console.error(req.status + " " + req.statusText + " " + url);
+        }
+    });
+    req.addEventListener("error", function () {
+        console.error("Erreur réseau avec l'URL " + url);
+    });
+    req.send(data);
+}
+
+var articlesElt = document.getElementById("articles");
 getAsync("http://localhost/javascript-web-srv/web/api/articles", function (texteReponse) {
     var articles = JSON.parse(texteReponse);
     articles.forEach(function (article) {
@@ -36,8 +51,8 @@ getAsync("http://localhost/javascript-web-srv/web/api/articles", function (texte
         titreElt.textContent = article.title;
         var contenuElt = document.createElement("p");
         contenuElt.textContent = article.content;
-        document.body.appendChild(titreElt);
-        document.body.appendChild(contenuElt);
+        articlesElt.appendChild(titreElt);
+        articlesElt.appendChild(contenuElt);
     });
 });
 
@@ -50,6 +65,12 @@ request.open('POST', 'http://localhost/javascript-web-srv/web/api/article', true
 request.setRequestHeader('Content-Type', 'application/json');
 request.send(JSON.stringify(nouvelArticle));*/
 postJson("http://localhost/javascript-web-srv/web/api/article", nouvelArticle);
+
+document.querySelector("form").addEventListener("submit", function (e) {
+    e.preventDefault();
+    var data = new FormData(e.target);
+    postForm("http://localhost/javascript-web-srv/web/api/article", data);
+});
 
 getAsync("https://www.data.gouv.fr/api/1/organizations/premier-ministre/", function (texteReponse) {
     var reponse = JSON.parse(texteReponse);
