@@ -33,7 +33,7 @@ req.addEventListener("error", function () {
 });
 req.send(null);*/
 
-// Exécute un appel AJAX
+/*// Exécute un appel AJAX
 // Prend en paramètres l'URL cible et la fonction callback appelée en cas de succès
 function ajaxGet(url, callback) {
     var req = new XMLHttpRequest();
@@ -50,7 +50,7 @@ function ajaxGet(url, callback) {
         console.error("Erreur réseau avec l'URL " + url);
     });
     req.send(null);
-}
+}*/
 
 /*function afficher(reponse) {
     console.log(reponse);
@@ -97,6 +97,10 @@ ajaxGet("http://localhost/javascript-web-srv/data/films.json", function (reponse
         console.log(film.titre);
     })
 });
+
+/*
+Exercice : Remplir la liste avec le contenu du fichier langages.txt
+*/
 
 ajaxGet("http://localhost/javascript-web-srv/data/langages.txt", function (reponse) {
     // Séparation du texte pour obtenir un tableau contenant les langages
