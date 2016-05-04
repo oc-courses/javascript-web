@@ -7,24 +7,15 @@
 </head>
 
 <body>
-    <h1>Ajouter un article</h1>
-    <form action="http://localhost/javascript-web-srv/web/article" method="post">
-        <p>
-            <label for="titre">Titre</label> :
-            <input type="text" name="title" id="titre" required>
-        </p>
-        <p>
-            <label for="contenu">Contenu</label> :
-            <br>
-            <textarea name="content" id="contenu" rows="5"></textarea>
-        </p>
-        <input type="submit" value="Ajouter">
-    </form>
-
+    <h1>Liste des articles</h1>
     <div id="articles">
-        <h1>Liste des articles</h1>
     </div>
 
+    <h1>Le Premier Ministre</h1>
+    <div id="premMin">
+    </div>
+
+    <script src="../js/ajax.js"></script>
     <script src="../js/cours.js"></script>
 </body>
 
