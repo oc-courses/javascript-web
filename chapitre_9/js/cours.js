@@ -25,7 +25,7 @@ ajaxGet("https://www.data.gouv.fr/api/1/organizations/premier-ministre/", functi
     premMinElt.appendChild(logoElt);
 });
 
-// Accès à la météo de Lyon
+// Accès à la météo de Lyon avec la clé d'accès 50a65432f17cf542
 ajaxGet("http://api.wunderground.com/api/50a65432f17cf542/conditions/q/France/Lyon.json", function (reponse) {
     var meteo = JSON.parse(reponse);
     // Récupération de certains résultats
