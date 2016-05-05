@@ -3,28 +3,32 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Utiliser des API</title>
+    <title>Evnoyer des données</title>
 </head>
 
 <body>
-    <h1>Ajouter un article</h1>
-    <form action="http://localhost/javascript-web-srv/web/article" method="post">
+    <h3>Qui est le plus fort ?</h3>
+    <form>
         <p>
-            <label for="titre">Titre</label> :
-            <input type="text" name="title" id="titre" required>
-        </p>
-        <p>
-            <label for="contenu">Contenu</label> :
+            <input type="radio" name="plusFort" id="elephant" value="ELE" checked>
+            <label for="elephant">L'éléphant</label>
             <br>
-            <textarea name="content" id="contenu" rows="5"></textarea>
+            <input type="radio" name="plusFort" id="rhinoceros" value="RHI">
+            <label for="rhinoceros">Le rhinocéros</label>
+            <br>
+            <input type="radio" name="plusFort" id="hippopotame" value="HIP">
+            <label for="hippopotame">L'hippopotame</label>
+            <br>
         </p>
-        <input type="submit" value="Ajouter">
+        <p>
+            <label for="nom">Votre nom</label> :
+            <input type="text" name="nom" id="nom" required>
+        </p>
+
+        <input type="submit" value="Votez">
     </form>
 
-    <div id="articles">
-        <h1>Liste des articles</h1>
-    </div>
-
+    <script src="../js/ajax.js"></script>
     <script src="../js/cours.js"></script>
 </body>
 
