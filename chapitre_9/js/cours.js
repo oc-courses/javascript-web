@@ -25,7 +25,20 @@ ajaxGet("https://www.data.gouv.fr/api/1/organizations/premier-ministre/", functi
     premMinElt.appendChild(logoElt);
 });
 
-// API key d'Emily Reese
-ajaxGet("http://api.wunderground.com/api/6ae045e189524fd2/conditions/q/France/Lyon.json", function (reponse) {
-    //console.log(reponse);
+// Accès à la météo de Lyon
+ajaxGet("http://api.wunderground.com/api/50a65432f17cf542/conditions/q/France/Lyon.json", function (reponse) {
+    var meteo = JSON.parse(reponse);
+    // Récupération de certains résultats
+    var temperature = meteo.current_observation.temp_c;
+    var humidite = meteo.current_observation.relative_humidity;
+    var imageUrl = meteo.current_observation.icon_url;
+    // Affichage des résultats
+    var conditionsElt = document.createElement("div");
+    conditionsElt.textContent = "Il fait actuellement " + temperature +
+        "°C et l'humidité est de " + humidite;
+    var imageElt = document.createElement("img");
+    imageElt.src = imageUrl;
+    var meteoElt = document.getElementById("meteo");
+    meteoElt.appendChild(conditionsElt);
+    meteoElt.appendChild(imageElt);
 });
