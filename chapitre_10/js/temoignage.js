@@ -1,8 +1,13 @@
 document.querySelector("form").addEventListener("submit", function (e) {
     e.preventDefault();
-    var article = {
-        title: e.target.elements.titre.value,
-        content: e.target.elements.contenu.value,
+    var temoignage = {
+        pseudo: e.target.elements.pseudo.value,
+        evaluation: e.target.elements.evaluation.value,
+        message: e.target.elements.message.value,
     };
-    ajaxPost("http://oc-jswebsrv.herokuapp.com/api/article", article, true);
+    ajaxPost("http://oc-jswebsrv.herokuapp.com/api/temoignage", temoignage, function (reponse) {
+        var messageElt = document.createElement("p");
+        messageElt.textContent = "Témoignage ajouté.";
+        document.body.appendChild(messageElt);
+    }, true);
 });

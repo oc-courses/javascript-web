@@ -20,12 +20,14 @@ function ajaxGet(url, callback) {
 // Exécute un appel AJAX POST
 // Prend en paramètres l'URL cible et la donnée à envoyer
 // Le 3ème paramètre indique si la donnée est au format JSON ou non
-function ajaxPost(url, data, isJson) {
+function ajaxPost(url, data, callback, isJson) {
     var req = new XMLHttpRequest();
     req.open("POST", url);
     req.addEventListener("load", function () {
-        if (req.status >= 400) {
-            // Affiche un message en cas d'échec de la requête
+        if (req.status >= 200 && req.status < 400) {
+            // Appelle la fonction callback en lui passant la réponse de la requête
+            callback(req.responseText);
+        } else {
             console.error(req.status + " " + req.statusText + " " + url);
         }
     });
