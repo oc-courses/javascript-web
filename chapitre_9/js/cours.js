@@ -14,6 +14,7 @@ ajaxGet("https://oc-jswebsrv.herokuapp.com/api/articles", function (reponse) {
 });
 
 var premMinElt = document.getElementById("premMin");
+// Accès aux informations publiques sur le Premier Ministre
 ajaxGet("https://www.data.gouv.fr/api/1/organizations/premier-ministre/", function (reponse) {
     var premierMinistre = JSON.parse(reponse);
     // Ajout de la description et du logo dans la page web
