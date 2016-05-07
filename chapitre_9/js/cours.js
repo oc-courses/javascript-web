@@ -5,9 +5,9 @@ ajaxGet("https://oc-jswebsrv.herokuapp.com/api/articles", function (reponse) {
     articles.forEach(function (article) {
         // Ajout du titre et du contenu de chaque article
         var titreElt = document.createElement("h2");
-        titreElt.textContent = article.title;
+        titreElt.textContent = article.titre;
         var contenuElt = document.createElement("p");
-        contenuElt.textContent = article.content;
+        contenuElt.textContent = article.contenu;
         articlesElt.appendChild(titreElt);
         articlesElt.appendChild(contenuElt);
     });
