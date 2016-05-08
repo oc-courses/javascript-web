@@ -8,6 +8,6 @@ document.querySelector("form").addEventListener("submit", function (e) {
     ajaxPost("http://oc-jswebsrv.herokuapp.com/api/temoignage", temoignage, function (reponse) {
         var messageElt = document.createElement("p");
         messageElt.textContent = "Témoignage ajouté.";
-        document.body.appendChild(messageElt);
+        document.getElementById("resultat").appendChild(messageElt);
     }, true);
 });

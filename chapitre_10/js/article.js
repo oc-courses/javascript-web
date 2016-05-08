@@ -5,6 +5,6 @@ form.addEventListener("submit", function (e) {
     ajaxPost("http://oc-jswebsrv.herokuapp.com/article", article, function (reponse) {
         var messageElt = document.createElement("p");
         messageElt.textContent = "L'article a bien été ajouté.";
-        document.body.appendChild(messageElt);
+        document.getElementById("resultat").appendChild(messageElt);
     });
 });
