@@ -4,13 +4,13 @@
 
 // Affiche des informations sur les liens
 function infosLiens() {
-    var liens = document.getElementsByTagName("a");
-    var nombreLiens = liens.length;
+    var liensElts = document.getElementsByTagName("a");
+    var nombreLiens = liensElts.length;
     console.log(nombreLiens);
 
     if (nombreLiens > 0) {
-        console.log(liens[0].getAttribute("href"));
-        console.log(liens[nombreLiens - 1].getAttribute("href"));
+        console.log(liensElts[0].getAttribute("href"));
+        console.log(liensElts[nombreLiens - 1].getAttribute("href"));
     }
 }
 
