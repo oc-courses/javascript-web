@@ -8,7 +8,7 @@ Code source associé au cours OpenClassrooms "Créez des pages web interactives 
 
     * Chapitre 1 : Découvrez le DOM
     * Chapitre 2 : Parcourez le DOM
-    * Chapitre 3 : Modifiez la structure de la page web
+    * Chapitre 3 : Modifiez la structure de la page
     * Chapitre 4 : Donnez du style à vos éléments
 
 * Partie 2 : Jouez avec vos utilisateurs
@@ -17,7 +17,8 @@ Code source associé au cours OpenClassrooms "Créez des pages web interactives 
     * Chapitre 6 : Manipulez les formulaires
     * Chapitre 7 : Animez vos pages
 
-* Partie 3 : Connectez-vous au Monde
+* Partie 3 : Interagissez avec des serveurs web
 
     * Chapitre 8 : Interrogez un serveur web
-    * Chapitre 9 : Utilisez des API
+    * Chapitre 9 : Utilisez des API web
+    * Chapitre 10 : Envoyez des données à un serveur wen
