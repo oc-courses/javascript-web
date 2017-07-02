@@ -5,7 +5,7 @@ Exercice : mini-lexique
 var motsElt = document.getElementById("mots");
 
 function afficherMots(lettre) {
-    ajaxGet("http://oc-jswebsrv.herokuapp.com/api/lexique/" + lettre, function (reponse) {
+    ajaxGet("https://oc-jswebsrv.herokuapp.com/api/lexique/" + lettre, function (reponse) {
         var mots = JSON.parse(reponse);
         motsElt.innerHTML = "";
         if (mots.length > 0) {
