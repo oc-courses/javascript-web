@@ -36,7 +36,7 @@ paysElt.addEventListener("input", function () {
             var suggestionElt = document.createElement("div");
             suggestionElt.classList.add("suggestion");
             suggestionElt.textContent = pays;
-            // Gère le lic sur une suggestion
+            // Gère le clic sur une suggestion
             suggestionElt.addEventListener("click", function (e) {
                 // Remplacement de la valeur saisie par la suggestion
                 paysElt.value = e.target.textContent;
