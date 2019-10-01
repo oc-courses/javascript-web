@@ -29,7 +29,7 @@ questions.forEach(function (question) {
     var texteEnonceElt = document.createElement("i");
     texteEnonceElt.textContent = question.enonce;
 
-    // Enoncé de lq question
+    // Enoncé de la question
     var enonceElt = document.createElement("div");
     enonceElt.appendChild(titreElt);
     enonceElt.appendChild(texteEnonceElt);
